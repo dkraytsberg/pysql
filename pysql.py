@@ -1,7 +1,6 @@
 import mysql
 from mysql.connector import errorcode
 
-
 def make_db_params():
 	"""
 	returns a map with some default connection parameters.
@@ -60,12 +59,3 @@ def make_query(connection, query = None):
 
 			return results
 
-def main(): #example usage
-	sql_args = make_db_params()
-	con = establish_connection(**sql_args)
-	q = make_query(con)
-	print(q)
-
-
-if __name__ == "__main__":
-	main()
